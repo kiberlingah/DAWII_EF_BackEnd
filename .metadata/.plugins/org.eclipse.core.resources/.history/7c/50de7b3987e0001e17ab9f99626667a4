@@ -1,0 +1,5 @@
+package com.dawii.EFAtencioKiberling.repo;
+
+public interface KindRepo {
+
+}

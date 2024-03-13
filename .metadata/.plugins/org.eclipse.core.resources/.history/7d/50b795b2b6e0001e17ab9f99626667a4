@@ -1,0 +1,25 @@
+package com.dawii.EFAtencioKiberling.repo;
+
+
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.dawii.EFAtencioKiberling.model.User;
+import com.dawii.EFAtencioKiberling.projections.ReportUserCategoryClass;
+
+public interface UserRepo extends JpaRepository<User, Integer>{
+	
+	@Query("SELECT new com.dawii.EFAtencioKiberling.projections.ReportUserCategoryClass("
+			+ "u.id, " 
+	        + "u.name, " 
+	        + "u.lastname, " 
+	        + "c.id, " 
+	        + "c.name) "
+	        +"FROM Ticket t "
+	        +"INNER JOIN user u ON u.id = t.user_id "
+	        +"INNER JOIN category c ON t.category_id = c.id")
+public List<ReportUserCategoryClass> getReportUserCategoryClass();
+}

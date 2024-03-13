@@ -1,0 +1,7 @@
+package com.dawii.EFAtencioKiberling.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TicketRepo extends JpaRepository<TicketRepo,Integer> {
+
+}

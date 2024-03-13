@@ -1,0 +1,17 @@
+package com.dawii.EFAtencioKiberling.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.dawii.EFAtencioKiberling.model.Ticket;
+import com.dawii.EFAtencioKiberling.repo.TicketRepo;
+import com.dawii.EFAtencioKiberling.service.TicketService;
+
+public class TicketServiceImpl implements TicketService {
+
+	@Autowired
+	TicketRepo ticketrepo;
+	
+
+}

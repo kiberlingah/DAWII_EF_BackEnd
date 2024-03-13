@@ -1,0 +1,10 @@
+package com.dawii.EFAtencioKiberling.projections;
+
+public class ReporteUsuarioCategoriaClass {
+	private int userId;
+	private String name;
+	private String lastname;
+	private int categoryId;
+	private String categoryName;
+
+}

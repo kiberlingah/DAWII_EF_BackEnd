@@ -1,0 +1,23 @@
+package com.dawii.EFAtencioKiberling.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.dawii.EFAtencioKiberling.model.Category;
+import com.dawii.EFAtencioKiberling.service.CategoryService;
+
+public class CategoryController {
+	
+	 @Autowired 
+	 CategoryService categoryService;
+	 
+	 @GetMapping("/categorylist") 
+	 public ResponseEntity<List<Category>>listCategory(){ 
+		 return new ResponseEntity<>(categoryService.list(),HttpStatus.OK) ; 
+		 }
+
+}
